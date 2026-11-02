@@ -1,0 +1,60 @@
+
+class Person {
+    String name;
+    int age;
+    double size;
+    String hairColor;
+
+    void walk(double distance) {
+        System.out.println(name + " walks " + distance + " km.");
+    }
+
+    void eat(String food) {
+        System.out.println(name + " eats " + food);
+    }
+
+    void speak(String language) {
+        System.out.println(name + " speaks " + language);
+    }
+}
+
+class Student extends Person {
+    void study(String subject) {
+        System.out.println(name + " studies " + subject);
+    }
+}
+
+class Teacher extends Person {
+    void teach(String subject) {
+        System.out.println(name + " teaches " + subject);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        s1.name = "Rahim";
+        s1.age = 20;
+        s1.size = 5.8;
+        s1.hairColor = "Black";
+
+        s1.walk(2);
+        s1.eat("Rice");
+        s1.speak("Bangla");
+        s1.study("Java");
+
+        System.out.println();
+
+        Teacher t1 = new Teacher();
+        t1.name = "Karim";
+        t1.age = 35;
+        t1.size = 5.9;
+        t1.hairColor = "Black";
+
+        t1.walk(1);
+        t1.eat("Bread");
+        t1.speak("English");
+        t1.teach("OOP");
+    }
+}
